@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+
+<head>
+
+
+</head>
+
+<body>
+    <script type="text/javascript">
+        //global variables
+		var output = "";
+function processInput(){
+            //takes input from inputBox, does something with it
+			var input;
+            input = document.getElementById('inputBox').value;
+            output = input;
+			sendOutput();
+        }
+		
+function sendOutput(){
+//writes output to paragraph "outputBox"
+	document.getElementById('outputBox').innerHTML = output
+		}
+		
+		
+    </script>
+
+<label>Input:
+<input type='text' id='inputBox'/>
+</label>
+
+<br>
+
+<input type='button' onclick='processInput()' value='Process' />
+
+<br>
+
+<p id='outputBox'> </p>
+	
+	
+</body>
+
+
+</html>

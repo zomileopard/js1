@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+</head>
+
+<body>
+#8 Demonstrates the Math object and some of its associated methods and constants.
+	<script type="text/javascript">
+        function processInput8() {
+		        var cubed = "";
+				var squareRoot = "";
+				var timesThree = "";
+				var rounded = "";
+				var timesPi = "";
+                input = document.getElementById('inputBox8').value;
+				input = parseFloat(input);
+				
+				cubed = Math.pow(input,3);
+				squareRoot = Math.sqrt(input);
+				timesThree = (input * 3);
+				rounded = Math.round(input);
+				timesPi = (Math.PI * input);
+				
+				document.getElementById('outputBoxCubed').innerHTML = "Input cubed = " + cubed;
+				document.getElementById('outputBoxSquareRoot').innerHTML = "Square Root of input = " + squareRoot;
+				document.getElementById('outputBoxTimesThree').innerHTML = "Input x 3 = " + timesThree;
+				document.getElementById('outputBoxRounded').innerHTML = "Input rounded to nearest whole = " + rounded;
+				document.getElementById('outputBoxTimesPi').innerHTML = "Input x pi = " + timesPi;
+				
+			}
+    </script>
+	<br>
+    <label>Input:
+        <input type='text' id='inputBox8'/>
+    </label>
+    <br>
+    <input type='button' onclick='processInput8()' value='Process' />
+    <br>
+    <p id='outputBoxCubed'> </p>
+	<p id='outputBoxSquareRoot'> </p>
+	<p id='outputBoxTimesThree'> </p>
+	<p id='outputBoxRounded'> </p>
+	<p id='outputBoxTimesPi'> </p>								
+    <br>
+    <br>
+
+
+#7 Demonstration of simple true/false outputs from a comparison, (input < 3).
+	<script type="text/javascript">
+        function processInput7() {
+		        var output = "default output";
+                input = document.getElementById('inputBox7').value;
+				//force input to number because JS is stupid about detecting what kind of data is typed into a text box even its it's just a number.
+				input = parseFloat(input)
+				output = "Your value is less than 3. " + "This is " + (input < 3) + "."
+				document.getElementById('outputBox7').innerHTML = output;
+				
+			}
+    </script>
+	<br>
+    <label>Input:
+        <input type='text' id='inputBox7'/>
+    </label>
+    <br>
+    <input type='button' onclick='processInput7()' value='Process' />
+    <br>
+    <p id='outputBox7'> </p>
+    <br>
+    <br>
+
+	
+	
+	#6 This one demonstrates mathematical comparisons. You'll get different results if you type a number greater, equal or less than 3.
+	<script type="text/javascript">
+        function processInput6() {
+		        var output = "default output";
+                input = document.getElementById('inputBox6').value;
+				//force input to number because JS is stupid about detecting what kind of data is typed into a text box even its it's just a number.
+				input = parseFloat(input)
+				if (input == 3) {output = "You typed 3."}
+				else if (input > 3) {output = "Input is greater than 3."}
+				else if (input < 3) {output = "Input is less than 3."}
+				else {output = "Type a fucking number."}
+				document.getElementById('outputBox6').innerHTML = output;
+				
+			}
+    </script>
+	<br>
+    <label>Input:
+        <input type='text' id='inputBox6'/>
+    </label>
+    <br>
+    <input type='button' onclick='processInput6()' value='Process' />
+    <br>
+    <p id='outputBox6'> </p>
+    <br>
+    <br>
+
+	
+	
+	#5 This one demonstrates multiple possible case matches for one result. Type "apple" "pear" or "sheep".
+	 <script type="text/javascript">
+        function processInput5() {
+		        var output = "default output";
+                input = document.getElementById('inputBox5').value;
+	switch(input){
+			case "apple":
+			case "pear":
+			case "sheep":
+			output = "Good.";
+			document.getElementById('outputBox5').innerHTML = output;
+				break;
+			case "":
+			output = "Did I tell you that you could fucking leave this blank?"
+			document.getElementById('outputBox5').innerHTML = output;
+				break;
+			default:
+			output = "I told you what to type. Don't be typing other shit."
+			document.getElementById('outputBox5').innerHTML = output;
+				break;
+			}
+			}
+    </script>
+    <br>
+    <label>Input:
+        <input type='text' id='inputBox5'/>
+    </label>
+    <br>
+    <input type='button' onclick='processInput5()' value='Process' />
+    <br>
+    <p id='outputBox5'> </p>
+    <br>
+    <br>
+	#4 This one demonstrates case tests.
+	 <script type="text/javascript">
+        function processInput4() {
+		        var output = "default output";
+                input = document.getElementById('inputBox4').value;
+	switch(input){
+			case "":
+			output = "Did I tell you that you could fucking leave this blank?"
+			document.getElementById('outputBox4').innerHTML = output;
+				break;
+			case "fuck you":
+			output = "fuck you too!";
+			document.getElementById('outputBox4').innerHTML = output;
+				break;
+			case "hi":
+			output = "hello";
+			document.getElementById('outputBox4').innerHTML = output;
+				break;
+			default:
+			output = "Bitch, I told you to type one or the other. Don't be typing other shit."
+			document.getElementById('outputBox4').innerHTML = output;
+				break;
+			}
+			}
+    </script>
+    <br>
+    <label>Input:
+        <input type='text' id='inputBox4' value='type "hi" or "fuck you"!' />
+    </label>
+    <br>
+    <input type='button' onclick='processInput4()' value='Process' />
+    <br>
+    <p id='outputBox4'> </p>
+    <br>
+    <br>
+	
+	
+	#3 This one tells you what kind of data .js thinks your input is.
+    <script type="text/javascript">
+        function processInput3() {
+                var output = "default output";
+                input = document.getElementById('inputBox3').value;
+				output = typeof input
+                document.getElementById('outputBox3').innerHTML = output
+                }
+    </script>
+    <br>
+    <label>Input:
+        <input type='text' id='inputBox3' value='hey, type 5 here!' />
+    </label>
+    <br>
+    <input type='button' onclick='processInput3()' value='Process' />
+    <br>
+    <p id='outputBox3'> </p>
+    <br>
+    <br>
+	
+	
+ #2 If test, but false is specified with another if != 5 operator instead of an else. Same result.
+    <script type="text/javascript">
+        function processInput2() {
+            var output = "default output";
+            input = document.getElementById('inputBox2').value;
+            if (input == 5) {
+                output = "You typed 5."
+            }
+            if (input != 5) {
+                output = "I told you to type 5, you fuck!"
+            }
+            document.getElementById('outputBox2').innerHTML = output
+        }
+    </script>
+    <br>
+    <label>Input:
+        <input type='text' id='inputBox2' value='hey, type 5 here!' />
+    </label>
+    <br>
+    <input type='button' onclick='processInput2()' value='Process' />
+    <br>
+    <p id='outputBox2'> </p>
+    <br>
+    <br>
+
+    #1 Standard if/else test.
+    <script type="text/javascript">
+        function processInput1() {
+            var output = "default output";
+            input = document.getElementById('inputBox1').value;
+            if (input == 5) {
+                output = "You typed 5."
+            } else {
+                output = "I told you to type 5, you fuck!"
+            }
+            document.getElementById('outputBox1').innerHTML = output
+        }
+    </script>
+    <br>
+    <label>Input:
+        <input type='text' id='inputBox1' value='hey, type 5 here!' />
+    </label>
+    <br>
+    <input type='button' onclick='processInput1()' value='Process' />
+    <br>
+    <p id='outputBox1'> </p>
+    <br>
+    <br>
+ 
+	
+
+	
+	
+</body>
+
+
+</html>
